@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from 'react-router-dom'; // Link is imported here
-import "./Navbar.css";
+import "./navbar.css";
 
 const Navbar = ({ cartCount = 0 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
