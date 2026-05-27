@@ -1,0 +1,16 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Compensates for the fixed 68px navbar on standalone sub-pages */
+.main-content {
+  flex: 1;
+  margin-top: 68px; 
+}
+
+/* Resets top margin for home page views since HeroSlider has its own internal padding-top */
+.main-content has(.hero-slider) {
+  margin-top: 0;
+}

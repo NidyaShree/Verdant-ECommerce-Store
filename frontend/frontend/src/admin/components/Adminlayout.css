@@ -1,0 +1,130 @@
+/* =========================================
+   VERDANT ADMIN DASHBOARD STYLES
+   Prime Theme: Dark Navy Blue
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+/* --- 1. Global Layout --- */
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f4f8; /* Very soft grayish-blue for the main background */
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* --- 2. The Sidebar (Dark Navy Blue) --- */
+.admin-sidebar {
+  width: 260px;
+  background-color: #0A192F; /* The deep, premium Dark Navy Blue */
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+/* --- 3. Branding (Logo Area) --- */
+.admin-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 28px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- 4. Navigation Links --- */
+.admin-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0;
+  flex-grow: 1;
+  gap: 5px; /* Slight spacing between links */
+}
+
+.admin-link {
+  padding: 14px 24px;
+  color: #a8b2d1; /* Soft slate/blueish gray for unselected text */
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+  display: flex;
+  align-items: center;
+}
+
+.admin-link:hover {
+  background-color: rgba(255, 255, 255, 0.05); /* Slight highlight on hover */
+  color: #ffffff;
+}
+
+/* Active State (When you are on that specific page) */
+.admin-link.active {
+  background-color: #112240; /* Lighter navy background */
+  color: #64ffda; /* A beautiful mint/teal accent color that looks amazing on navy */
+  border-left: 4px solid #64ffda;
+  font-weight: 600;
+}
+
+/* --- 5. Bottom Action Area (Logout / Back) --- */
+.admin-bottom {
+  padding: 24px;
+  background-color: #061121; /* Slightly darker navy for the footer */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.back-to-store {
+  color: #a8b2d1;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  display: inline-block;
+}
+
+.back-to-store:hover {
+  color: #ffffff;
+}
+
+/* Specific styling for the logout button to make it distinct */
+button.back-to-store {
+  color: #ff6b6b !important; /* Soft red for logout */
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+}
+
+button.back-to-store:hover {
+  color: #ff8787 !important;
+}
+
+/* --- 6. Main Content Area --- */
+.admin-main {
+  flex-grow: 1;
+  margin-left: 260px; /* Crucial: Pushes content to the right of the 260px sidebar */
+  padding: 40px;
+  /* If App.css tries to add padding from the main navbar, this overrides it */
+  padding-top: 40px !important; 
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Basic headers for when you start building the inner pages */
+.admin-main h1 {
+  color: #0A192F;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+}

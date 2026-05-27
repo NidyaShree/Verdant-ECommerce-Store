@@ -1,0 +1,245 @@
+.cart-page-container {
+  max-width: 1140px;
+  margin: 48px auto;
+  padding: 0 24px 60px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.cart-page-container h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1a2e44;
+  margin-bottom: 28px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e0e7ec;
+}
+
+/* Layout */
+.cart-layout {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.cart-items-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Cart Item Card */
+.cart-item-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid #e4eaee;
+  border-radius: 10px;
+  padding: 14px 16px;
+  transition: box-shadow 0.18s;
+}
+
+.cart-item-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.cart-item-image {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  border: 1px solid #eaecee;
+}
+
+.cart-item-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.cart-item-title {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a2e44;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cart-item-category {
+  margin: 0 0 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8fa3b1;
+}
+
+.cart-item-qty-price {
+  display: flex;
+  gap: 16px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #2c7a4b;
+}
+
+/* Actions column */
+.cart-item-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.item-total-price {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a2e44;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #b94444;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.remove-btn:hover {
+  background: #fff0f0;
+  color: #8b2020;
+}
+
+/* Summary Panel */
+.cart-summary-section {
+  flex: 1;
+  background: #fff;
+  padding: 22px 20px;
+  border-radius: 10px;
+  border: 1px solid #e4eaee;
+  position: sticky;
+  top: 88px;
+}
+
+.cart-summary-section h2 {
+  margin: 0 0 18px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a2e44;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #edf0f2;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  color: #4a6070;
+}
+
+.free-shipping {
+  background: #eef5f1;
+  color: #2c7a4b;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 20px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #edf0f2;
+  margin: 6px 0 12px;
+}
+
+.total-row {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a2e44;
+  margin-top: 4px;
+}
+
+.tax-note {
+  font-size: 0.76rem;
+  color: #9aabb6;
+  text-align: center;
+  margin-bottom: 16px;
+  margin-top: 4px;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 13px;
+  background: #2c7a4b;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  letter-spacing: 0.01em;
+}
+
+.checkout-btn:hover {
+  background: #245f3c;
+}
+
+/* Empty Cart */
+.empty-cart-container {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.empty-cart-container h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a2e44;
+  margin-bottom: 8px;
+}
+
+.empty-cart-container p {
+  font-size: 0.9rem;
+  color: #6b7f8e;
+  margin-bottom: 24px;
+}
+
+.continue-shopping-btn {
+  display: inline-block;
+  padding: 11px 24px;
+  background: #2c7a4b;
+  color: white;
+  text-decoration: none;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.continue-shopping-btn:hover {
+  background: #245f3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cart-layout {
+    flex-direction: column;
+  }
+
+  .cart-summary-section {
+    position: static;
+    width: 100%;
+  }
+}

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700&display=swap');
+
+/* Main Card Container */
+.product-card {
+  font-family: 'DM Sans', sans-serif;
+  width: 100%;
+  max-width: 280px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #eaedf0; /* Very soft light grey border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); /* Extremely subtle shadow */
+}
+
+/* Image Area */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 260px; /* Adjust based on your image aspect ratio */
+  overflow: hidden;
+  border-bottom: 1px solid #f4f6f8;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Best Seller Badge */
+.badge-bestseller {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background-color: #1f352e; /* Dark slate green from image */
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 20px; /* Pill shape */
+  letter-spacing: 0.05em;
+  z-index: 2;
+}
+
+/* Content Area */
+.card-content {
+  padding: 16px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Category Label */
+.category {
+  font-size: 11px;
+  font-weight: 600;
+  color: #8da1b5; /* Light slate blue/grey */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+/* Product Title - Using a Serif font like the image */
+.title {
+  font-family: 'Playfair Display', serif; /* Classic serif font */
+  font-size: 22px;
+  font-weight: 700;
+  color: #011b2b; /* Very dark navy/almost black */
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+/* Rating Row */
+.rating-row {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #5d7183; /* Muted grey for text */
+  margin-bottom: 24px;
+}
+
+.star {
+  color: #5d7183; /* Matching the muted star in the image */
+  margin-right: 4px;
+  font-size: 13px;
+}
+
+.score {
+  font-weight: 500;
+}
+
+.divider {
+  margin: 0 8px;
+  color: #d1d8df; /* Lighter grey for the pipe */
+}
+
+.reviews {
+  font-weight: 400;
+}
+
+/* Price & Button Row */
+.purchase-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 700;
+  color: #011b2b;
+}
+
+/* + Add Button */
+.add-button {
+  background-color: #ffffff;
+  color: #011b2b;
+  border: 1px solid #011b2b; /* Dark border matching text */
+  padding: 8px 20px;
+  border-radius: 8px; /* Slightly rounded rectangle */
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-button:hover {
+  background-color: #f4f6f8; /* Slight grey on hover */
+}

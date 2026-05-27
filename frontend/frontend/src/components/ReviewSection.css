@@ -1,0 +1,259 @@
+.reviews-section {
+  margin-top: 70px;
+  padding: 45px;
+  background: white;
+  border-radius: 28px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+}
+
+.reviews-section h3 {
+  font-size: 36px;
+  color: #17392f;
+  margin-bottom: 35px;
+  font-family: Georgia, serif;
+  position: relative;
+}
+
+.reviews-section h3::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: #5d9b70;
+  display: block;
+  margin-top: 12px;
+  border-radius: 10px;
+}
+
+/* =========================
+   REVIEW LIST
+========================= */
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* =========================
+   REVIEW CARD
+========================= */
+
+.review-card {
+  background: #fafbf9;
+  border: 1px solid #eeeeee;
+  border-radius: 22px;
+  padding: 28px;
+  transition: all 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================
+   REVIEW HEADER
+========================= */
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   STARS
+========================= */
+
+.stars {
+  color: #f4b740;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* =========================
+   USER INFO
+========================= */
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #17392f;
+  font-size: 15px;
+}
+
+.user-info strong {
+  font-size: 16px;
+}
+
+/* =========================
+   VERIFIED BADGE
+========================= */
+
+.verified-badge {
+  background: #17392f;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+/* =========================
+   DATE
+========================= */
+
+.review-date {
+  font-size: 13px;
+  color: #8d8d8d;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   REVIEW TEXT
+========================= */
+
+.review-text {
+  color: #5e5e5e;
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+/* =========================
+   ADD REVIEW FORM
+========================= */
+
+.add-review-form {
+  margin-top: 50px;
+  padding-top: 40px;
+  border-top: 1px solid #ececec;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.add-review-form h4 {
+  font-size: 28px;
+  color: #17392f;
+  font-family: Georgia, serif;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   SELECT
+========================= */
+
+.add-review-form select {
+  height: 55px;
+  border-radius: 14px;
+  border: 1px solid #dddddd;
+  padding: 0 16px;
+  font-size: 15px;
+  background: #fafafa;
+  outline: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.add-review-form select:focus {
+  border-color: #5d9b70;
+  background: white;
+}
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.add-review-form textarea {
+  min-height: 140px;
+  resize: vertical;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid #dddddd;
+  background: #fafafa;
+  font-size: 15px;
+  line-height: 1.7;
+  outline: none;
+  transition: 0.3s ease;
+  font-family: inherit;
+}
+
+.add-review-form textarea:focus {
+  border-color: #5d9b70;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(93, 155, 112, 0.1);
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.add-review-form button {
+  width: fit-content;
+  min-width: 220px;
+  height: 56px;
+  border: none;
+  border-radius: 16px;
+  background: #17392f;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-review-form button:hover {
+  background: #285746;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(23, 57, 47, 0.18);
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.reviews-list:empty::before {
+  content: "No reviews yet. Be the first to share your thoughts 🌿";
+  color: #888;
+  font-size: 16px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .reviews-section {
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+
+  .reviews-section h3 {
+    font-size: 28px;
+  }
+
+  .add-review-form h4 {
+    font-size: 24px;
+  }
+
+  .review-card {
+    padding: 22px;
+  }
+
+  .review-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-review-form button {
+    width: 100%;
+  }
+}

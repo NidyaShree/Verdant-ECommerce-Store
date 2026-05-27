@@ -1,0 +1,86 @@
+/* components/FilterSidebar.css */
+.filter-sidebar {
+  width: 280px;
+  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid #eef2f1;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+}
+
+.filter-section {
+  margin-bottom: 35px;
+}
+
+.filter-title {
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a3c34; /* Verdant Dark Green */
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Category & Care Options */
+.filter-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.filter-option:hover {
+  color: #2d6a4f;
+}
+
+.filter-option input {
+  margin-right: 12px;
+  accent-color: #2d6a4f;
+  width: 16px;
+  height: 16px;
+}
+
+/* Price Range Slider */
+.price-range-container {
+  padding: 10px 5px;
+}
+
+.price-slider {
+  width: 100%;
+  accent-color: #2d6a4f;
+  cursor: pointer;
+}
+
+.price-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Reset Button */
+.reset-filters {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #2d6a4f;
+  color: #2d6a4f;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: all 0.3s;
+}
+
+.reset-filters:hover {
+  background: #2d6a4f;
+  color: white;
+}

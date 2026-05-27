@@ -1,0 +1,131 @@
+/* components/SeedCard.css */
+.seed-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  transition: transform 0.2s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.seed-card:hover {
+  transform: translateY(-5px);
+}
+
+.seed-image-container {
+  position: relative;
+  height: 220px; /* Slightly shorter than plants to fit seed packet shapes */
+  background-color: #fcfdfc; 
+}
+
+.seed-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Reusing the classy badges from your plant cards */
+.seed-badge-dark {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #1a3c34;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.seed-badge-discount {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #e6f4ea;
+  color: #2d6a4f;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.seed-card-content {
+  padding: 16px;
+}
+
+.seed-category {
+  color: #7b93a4;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.seed-title {
+  font-size: 1.1rem;
+  color: #111;
+  margin: 0 0 10px 0;
+  font-family: Georgia, serif;
+  height: 2.4em; /* Ensures titles don't break the grid alignment */
+  overflow: hidden;
+}
+
+.seed-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.seed-current-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a3c34;
+}
+
+.seed-original-price {
+  font-size: 0.9rem;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+
+.seed-add-btn {
+  background: white;
+  border: 1.5px solid #1a3c34;
+  color: #1a3c34;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.seed-add-btn:hover {
+  background: #1a3c34;
+  color: white;
+}
+
+/* Paste these in SeedCard.css if they aren't there yet */
+.sold-out-btn {
+  background-color: #d3d3d3 !important;
+  color: #888 !important;
+  border: 1px solid #ccc !important;
+  cursor: not-allowed !important;
+}
+
+.out-of-stock-img img {
+  opacity: 0.6;
+  filter: grayscale(80%);
+}
+
+.sold-out-badge {
+  background-color: #333 !important;
+}
+
+.text-muted {
+  color: #999;
+}
