@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 // Components
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar";
 import HeroSlider from "./components/HeroSlider";
 import BestSellers from "./components/BestSellers";
 
