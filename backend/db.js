@@ -9,6 +9,9 @@ const pool = new pg.Pool({
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
   database: process.env.DB_DATABASE,
+  ssl: {
+    rejectUnauthorized: false // <--- This is the VIP pass for Neon
+  }
 });
 
 export default pool;
