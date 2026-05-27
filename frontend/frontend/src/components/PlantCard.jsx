@@ -16,7 +16,7 @@ const PlantCard = ({ plant, onAddToCart }) => {
       {isSoldOut ? (
         <div className="image-container out-of-stock-img">
           <span className="badge-bestseller" style={{ backgroundColor: '#3f2626' }}>Sold Out</span>
-          <img src={`http://localhost:5000${plant.image_url}`} alt={plant.name} className="product-img" style={{ opacity: 0.6, filter: 'grayscale(60%)' }} />
+          <img src={`https://verdant-backend-usze.onrender.com/${plant.image_url}`} alt={plant.name} className="product-img" style={{ opacity: 0.6, filter: 'grayscale(60%)' }} />
         </div>
       ) : (
         <Link to={`/plants/${plant.id}`} style={{ textDecoration: 'none' }}>
@@ -30,7 +30,7 @@ const PlantCard = ({ plant, onAddToCart }) => {
               </span>
             )}
             
-            <img src={`http://localhost:5000${plant.image_url}`} alt={plant.name} className="product-img" />
+            <img src={`https://verdant-backend-usze.onrender.com/${plant.image_url}`} alt={plant.name} className="product-img" />
           </div>
         </Link>
       )}

@@ -18,7 +18,7 @@ const ToolDetail = ({ onAddToCart }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    fetch(`http://localhost:5000/api/tools/${id}`)
+    fetch(`https://verdant-backend-usze.onrender.com//api/tools/${id}`)
       .then(res => res.json())
       .then(data => {
         setTool(data);
@@ -49,7 +49,7 @@ const ToolDetail = ({ onAddToCart }) => {
     setDeliveryInfo('');
 
     try {
-      const response = await fetch(`http://localhost:5000/api/check-pincode/${pincode}`);
+      const response = await fetch(`https://verdant-backend-usze.onrender.com//api/check-pincode/${pincode}`);
       const data = await response.json();
 
       if (data.success) {
@@ -75,7 +75,7 @@ const ToolDetail = ({ onAddToCart }) => {
 
       <div className="product-layout">
         <div className="product-image-section">
-          <img src={`http://localhost:5000${tool.image_url}`} alt={tool.name} className="main-product-image" />
+          <img src={`https://verdant-backend-usze.onrender.com/${tool.image_url}`} alt={tool.name} className="main-product-image" />
         </div>
 
         <div className="product-info-section">

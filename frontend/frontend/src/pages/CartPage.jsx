@@ -42,7 +42,7 @@ const CartPage = ({ cartItems, setCartItems }) => {
         <div className="cart-items-section">
           {cartItems.map((item, index) => (
             <div key={index} className="cart-item-card">
-              <img src={`http://localhost:5000${item.image_url}`} alt={item.name} className="cart-item-image" />
+              <img src={`https://verdant-backend-usze.onrender.com/${item.image_url}`} alt={item.name} className="cart-item-image" />
               
               <div className="cart-item-details">
                 <h3 className="cart-item-title">{item.name}</h3>

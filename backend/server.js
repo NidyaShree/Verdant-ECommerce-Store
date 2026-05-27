@@ -624,5 +624,5 @@ app.get("/api/featured-products", async (req, res) => {
 
 
 app.listen(5000, () => {
-    console.log("Verdant Backend running on http://localhost:5000");
+    console.log("Verdant Backend running on https://verdant-backend-usze.onrender.com/");
 });

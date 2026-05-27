@@ -18,7 +18,7 @@ const ProductDetail = ({ onAddToCart }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    fetch(`http://localhost:5000/api/plants/${id}`)
+    fetch(`https://verdant-backend-usze.onrender.com//api/plants/${id}`)
       .then(res => res.json())
       .then(data => {
         setPlant(data);
@@ -36,7 +36,7 @@ const ProductDetail = ({ onAddToCart }) => {
     setDeliveryInfo('');
 
     try {
-      const response = await fetch(`http://localhost:5000/api/check-pincode/${pincode}`);
+      const response = await fetch(`https://verdant-backend-usze.onrender.com//api/check-pincode/${pincode}`);
       const data = await response.json();
 
       if (data.success) {
@@ -81,7 +81,7 @@ const ProductDetail = ({ onAddToCart }) => {
       <div className="product-layout">
         {/* Left: Image Gallery */}
         <div className="product-image-section">
-          <img src={`http://localhost:5000${plant.image_url}`} alt={plant.name} className="main-product-image" />
+          <img src={`https://verdant-backend-usze.onrender.com/${plant.image_url}`} alt={plant.name} className="main-product-image" />
         </div>
 
         {/* Right: Info Section */}

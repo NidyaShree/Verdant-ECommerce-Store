@@ -12,7 +12,7 @@ const ToolCard = ({ tool, onAddToCart }) => {
           {tool.discount > 0 && <span className="tool-badge-discount">-{tool.discount}%</span>}
           
           <img 
-            src={`http://localhost:5000${tool.image_url}`} 
+            src={`https://verdant-backend-usze.onrender.com/${tool.image_url}`} 
             alt={tool.name} 
             className="tool-image" 
           />

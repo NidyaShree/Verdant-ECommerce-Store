@@ -19,7 +19,7 @@ const SeedCard = ({ seed, onAddToCart }) => {
       {isSoldOut ? (
         <div className="seed-image-container out-of-stock-img">
           <span className="seed-badge-dark sold-out-badge">Sold Out</span>
-          <img src={`http://localhost:5000${seed.image_url}`} alt={seed.name} className="seed-image" />
+          <img src={`https://verdant-backend-usze.onrender.com/${seed.image_url}`} alt={seed.name} className="seed-image" />
         </div>
       ) : (
         <Link to={`/seeds/${seed.id}`} style={{ textDecoration: 'none' }}>
@@ -27,7 +27,7 @@ const SeedCard = ({ seed, onAddToCart }) => {
             {seed.badge && <span className="seed-badge-dark">{seed.badge}</span>}
             {seed.discount > 0 && <span className="seed-badge-discount">-{seed.discount}%</span>}
             <img 
-              src={`http://localhost:5000${seed.image_url}`} 
+              src={`https://verdant-backend-usze.onrender.com/${seed.image_url}`} 
               alt={seed.name} 
               className="seed-image" 
             />

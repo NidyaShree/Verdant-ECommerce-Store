@@ -18,7 +18,7 @@ const SeedDetail = ({ onAddToCart }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    fetch(`http://localhost:5000/api/seeds/${id}`)
+    fetch(`https://verdant-backend-usze.onrender.com//api/seeds/${id}`)
       .then(res => res.json())
       .then(data => {
         setSeed(data);
@@ -49,7 +49,7 @@ const SeedDetail = ({ onAddToCart }) => {
     setDeliveryInfo('');
 
     try {
-      const response = await fetch(`http://localhost:5000/api/check-pincode/${pincode}`);
+      const response = await fetch(`https://verdant-backend-usze.onrender.com//api/check-pincode/${pincode}`);
       const data = await response.json();
 
       if (data.success) {
@@ -75,7 +75,7 @@ const SeedDetail = ({ onAddToCart }) => {
 
       <div className="product-layout">
         <div className="product-image-section">
-          <img src={`http://localhost:5000${seed.image_url}`} alt={seed.name} className="main-product-image" />
+          <img src={`https://verdant-backend-usze.onrender.com/${seed.image_url}`} alt={seed.name} className="main-product-image" />
         </div>
 
         <div className="product-info-section">

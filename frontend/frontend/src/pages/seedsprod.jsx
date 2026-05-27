@@ -16,7 +16,7 @@ const SeedsProd = ({ onAddToCart }) => {
 });
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/seeds')
+    fetch('https://verdant-backend-usze.onrender.com//api/seeds')
       .then(res => res.json())
       .then(data => {
         setSeeds(data);

@@ -20,7 +20,7 @@ const AdminTools = () => {
   // 1. FETCH ALL TOOLS
   const fetchTools = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/admin/tools');
+      const res = await fetch('https://verdant-backend-usze.onrender.com//api/admin/tools');
       const data = await res.json();
       if (data.success) setTools(data.tools);
     } catch (err) {
@@ -61,8 +61,8 @@ const AdminTools = () => {
     e.preventDefault();
     
     const url = editingToolId 
-      ? `http://localhost:5000/api/admin/tools/${editingToolId}`
-      : 'http://localhost:5000/api/admin/tools';
+      ? `https://verdant-backend-usze.onrender.com//api/admin/tools/${editingToolId}`
+      : 'https://verdant-backend-usze.onrender.com//api/admin/tools';
       
     const method = editingToolId ? 'PUT' : 'POST';
 
@@ -89,7 +89,7 @@ const AdminTools = () => {
   const handleDelete = async (id, name) => {
     if (window.confirm(`Are you sure you want to delete ${name}? This cannot be undone.`)) {
       try {
-        const res = await fetch(`http://localhost:5000/api/admin/tools/${id}`, {
+        const res = await fetch(`https://verdant-backend-usze.onrender.com//api/admin/tools/${id}`, {
           method: 'DELETE'
         });
         const data = await res.json();
@@ -136,7 +136,7 @@ const AdminTools = () => {
                 {/* Notice the TOL prefix for Tools! */}
                 <td className="order-id">TOL-{tool.id}</td>
                 <td className="product-image-cell">
-                  <img src={tool.image_url.startsWith('http') ? tool.image_url : `http://localhost:5000${tool.image_url}`} alt={tool.name} />
+                  <img src={tool.image_url.startsWith('http') ? tool.image_url : `https://verdant-backend-usze.onrender.com/${tool.image_url}`} alt={tool.name} />
                 </td>
                 <td style={{ fontWeight: 600, color: '#0A192F' }}>{tool.name}</td>
                 <td className="amount-cell">₹{tool.current_price}</td>

@@ -17,7 +17,7 @@ const AuthPage = () => {
     e.preventDefault();
     const endpoint = isLogin ? '/api/login' : '/api/register';
     
-    const res = await fetch(`http://localhost:5000${endpoint}`, {
+    const res = await fetch(`https://verdant-backend-usze.onrender.com/${endpoint}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),

@@ -20,7 +20,7 @@ const AdminPlants = () => {
   // 1. FETCH ALL PLANTS
   const fetchPlants = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/admin/plants');
+      const res = await fetch('https://verdant-backend-usze.onrender.com//api/admin/plants');
       const data = await res.json();
       if (data.success) setPlants(data.plants);
     } catch (err) {
@@ -64,8 +64,8 @@ const AdminPlants = () => {
     
     // Determine if we are hitting the POST (add) or PUT (edit) route
     const url = editingPlantId 
-      ? `http://localhost:5000/api/admin/plants/${editingPlantId}`
-      : 'http://localhost:5000/api/admin/plants';
+      ? `https://verdant-backend-usze.onrender.com//api/admin/plants/${editingPlantId}`
+      : 'https://verdant-backend-usze.onrender.com//api/admin/plants';
       
     const method = editingPlantId ? 'PUT' : 'POST';
 
@@ -92,7 +92,7 @@ const AdminPlants = () => {
   const handleDelete = async (id, name) => {
     if (window.confirm(`Are you sure you want to delete ${name}? This cannot be undone.`)) {
       try {
-        const res = await fetch(`http://localhost:5000/api/admin/plants/${id}`, {
+        const res = await fetch(`https://verdant-backend-usze.onrender.com//api/admin/plants/${id}`, {
           method: 'DELETE'
         });
         const data = await res.json();
@@ -139,7 +139,7 @@ const AdminPlants = () => {
               <tr key={plant.id}>
                 <td className="order-id">PLT-{plant.id}</td>
                 <td className="product-image-cell">
-                  <img src={plant.image_url.startsWith('http') ? plant.image_url : `http://localhost:5000${plant.image_url}`} alt={plant.name} />
+                  <img src={plant.image_url.startsWith('http') ? plant.image_url : `https://verdant-backend-usze.onrender.com/${plant.image_url}`} alt={plant.name} />
                 </td>
                 <td style={{ fontWeight: 600, color: '#0A192F' }}>{plant.name}</td>
                 <td className="amount-cell">₹{plant.current_price}</td>

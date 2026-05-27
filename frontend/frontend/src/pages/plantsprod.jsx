@@ -16,7 +16,7 @@ const PlantsProd = ({ onAddToCart }) => {
   });
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/plants')
+    fetch('https://verdant-backend-usze.onrender.com//api/plants')
       .then(res => res.json())
       .then(data => {
         setPlants(data);

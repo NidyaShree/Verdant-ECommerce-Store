@@ -25,7 +25,7 @@ const ProductCard = ({ product }) => {
   // 3. Format Image URL
   const imageUrl = product.image_url.startsWith('http')
     ? product.image_url
-    : `http://localhost:5000${product.image_url}`;
+    : `https://verdant-backend-usze.onrender.com/${product.image_url}`;
 
   // ==========================================
   // 4. THE DYNAMIC TAG ENGINE
@@ -143,7 +143,7 @@ const BestSellers = () => {
   useEffect(() => {
     const fetchFeaturedProducts = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/featured-products');
+        const response = await fetch('https://verdant-backend-usze.onrender.com//api/featured-products');
         const data = await response.json();
         if (data.success) {
           setProducts(data.products);

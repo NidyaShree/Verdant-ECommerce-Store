@@ -8,7 +8,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchDashboardStats = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/admin/dashboard-stats');
+        const response = await fetch('https://verdant-backend-usze.onrender.com//api/admin/dashboard-stats');
         const data = await response.json();
         if (data.success) {
           setStats({
@@ -29,7 +29,7 @@ const AdminDashboard = () => {
   // --- UPDATE STATUS FUNCTION (Kept so you can still update from the dashboard!) ---
   const handleStatusChange = async (orderId, newStatus) => {
     try {
-      const response = await fetch('http://localhost:5000/api/admin/update-order-status', {
+      const response = await fetch('https://verdant-backend-usze.onrender.com//api/admin/update-order-status', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ orderId, newStatus })

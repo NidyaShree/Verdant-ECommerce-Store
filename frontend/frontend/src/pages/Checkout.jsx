@@ -101,7 +101,7 @@ const Checkout = () => {
       if (isCartCheckout) {
         for (const item of products) {
           const itemType = item.tool_type || item.material ? 'tool' : (item.sowing_period ? 'seed' : 'plant');
-          const res = await fetch(`http://localhost:5000/api/${tableMap[itemType]}/${item.id}`);
+          const res = await fetch(`https://verdant-backend-usze.onrender.com//api/${tableMap[itemType]}/${item.id}`);
           const fresh = await res.json();
           
           if (Number(fresh.stock) < item.quantity) {
@@ -112,7 +112,7 @@ const Checkout = () => {
           }
         }
       } else {
-        const res = await fetch(`http://localhost:5000/api/${tableMap[type]}/${product.id}`);
+        const res = await fetch(`https://verdant-backend-usze.onrender.com//api/${tableMap[type]}/${product.id}`);
         const fresh = await res.json();
         if (Number(fresh.stock) < quantity) {
           setErrorMessage(`Sorry, "${product.name}" is out of stock.`);
@@ -138,7 +138,7 @@ const Checkout = () => {
 
       const generatedOrderId = `ORD-${Math.floor(Math.random() * 1000000)}`;
 
-      await fetch('http://localhost:5000/api/save-order', {
+      await fetch('https://verdant-backend-usze.onrender.com//api/save-order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -154,14 +154,14 @@ const Checkout = () => {
 
       if (isCartCheckout) {
         for (const item of itemsToSave) {
-          await fetch('http://localhost:5000/api/update-stock', {
+          await fetch('https://verdant-backend-usze.onrender.com//api/update-stock', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ type: item.type, id: item.id, quantity: item.quantity })
           });
         }
       } else {
-        await fetch('http://localhost:5000/api/update-stock', {
+        await fetch('https://verdant-backend-usze.onrender.com//api/update-stock', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ type, id: product.id, quantity })
@@ -263,7 +263,7 @@ const Checkout = () => {
             <h2>Order Reserved!</h2>
             <p className="success-subtitle">Your items are locked in. Please complete payment to finalize.</p>
             <div className="order-summary-card">
-              <img src={`http://localhost:5000${orderDetails.image}`} alt={orderDetails.productName} />
+              <img src={`https://verdant-backend-usze.onrender.com/${orderDetails.image}`} alt={orderDetails.productName} />
               <div className="order-summary-details">
                 <h3>{orderDetails.productName}</h3>
                 <p>Qty: {orderDetails.quantity}</p>

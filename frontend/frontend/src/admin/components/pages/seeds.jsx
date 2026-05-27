@@ -20,7 +20,7 @@ const AdminSeeds = () => {
   // 1. FETCH ALL SEEDS
   const fetchSeeds = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/admin/seeds');
+      const res = await fetch('https://verdant-backend-usze.onrender.com//api/admin/seeds');
       const data = await res.json();
       if (data.success) setSeeds(data.seeds);
     } catch (err) {
@@ -61,8 +61,8 @@ const AdminSeeds = () => {
     e.preventDefault();
     
     const url = editingSeedId 
-      ? `http://localhost:5000/api/admin/seeds/${editingSeedId}`
-      : 'http://localhost:5000/api/admin/seeds';
+      ? `https://verdant-backend-usze.onrender.com//api/admin/seeds/${editingSeedId}`
+      : 'https://verdant-backend-usze.onrender.com//api/admin/seeds';
       
     const method = editingSeedId ? 'PUT' : 'POST';
 
@@ -89,7 +89,7 @@ const AdminSeeds = () => {
   const handleDelete = async (id, name) => {
     if (window.confirm(`Are you sure you want to delete ${name}? This cannot be undone.`)) {
       try {
-        const res = await fetch(`http://localhost:5000/api/admin/seeds/${id}`, {
+        const res = await fetch(`https://verdant-backend-usze.onrender.com//api/admin/seeds/${id}`, {
           method: 'DELETE'
         });
         const data = await res.json();
@@ -135,7 +135,7 @@ const AdminSeeds = () => {
               <tr key={seed.id}>
                 <td className="order-id">SED-{seed.id}</td>
                 <td className="product-image-cell">
-                  <img src={seed.image_url.startsWith('http') ? seed.image_url : `http://localhost:5000${seed.image_url}`} alt={seed.name} />
+                  <img src={seed.image_url.startsWith('http') ? seed.image_url : `https://verdant-backend-usze.onrender.com/${seed.image_url}`} alt={seed.name} />
                 </td>
                 <td style={{ fontWeight: 600, color: '#0A192F' }}>{seed.name}</td>
                 <td className="amount-cell">₹{seed.current_price}</td>

@@ -15,7 +15,7 @@ const ToolsProd = ({ onAddToCart }) => {
   });
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/tools')
+    fetch('https://verdant-backend-usze.onrender.com//api/tools')
       .then(res => res.json())
       .then(data => {
         setTools(data);

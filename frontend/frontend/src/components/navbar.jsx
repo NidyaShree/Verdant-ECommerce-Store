@@ -18,7 +18,7 @@ const Navbar = ({ cartCount = 0 }) => {
     setIsLoading(true);
     const timer = setTimeout(async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/search?q=${encodeURIComponent(searchQuery)}`);
+        const res = await fetch(`https://verdant-backend-usze.onrender.com//api/search?q=${encodeURIComponent(searchQuery)}`);
         const data = await res.json();
         setSearchResults(data);
       } catch (err) {
@@ -161,7 +161,7 @@ const Navbar = ({ cartCount = 0 }) => {
               onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
             >
               <img
-                src={`http://localhost:5000${item.image_url}`}
+                src={`https://verdant-backend-usze.onrender.com/${item.image_url}`}
                 alt={item.name}
                 style={{ width: 52, height: 52, objectFit: 'cover', borderRadius: 8, border: '1px solid #eee', flexShrink: 0 }}
                 onError={(e) => { e.target.src = 'https://placehold.co/52x52?text=?'; }}

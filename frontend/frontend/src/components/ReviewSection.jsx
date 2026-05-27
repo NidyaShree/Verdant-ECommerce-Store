@@ -9,7 +9,7 @@ const ReviewSection = ({ productId, productType }) => {
     
     // Fetch reviews whenever the product changes
     useEffect(() => {
-        fetch(`http://localhost:5000/api/reviews/${productType}/${productId}`)
+        fetch(`https://verdant-backend-usze.onrender.com//api/reviews/${productType}/${productId}`)
             .then(res => res.json())
             .then(data => {
                 setReviews(data);
@@ -28,7 +28,7 @@ const ReviewSection = ({ productId, productType }) => {
             return;
         }
 
-        const res = await fetch("http://localhost:5000/api/reviews", {
+        const res = await fetch("https://verdant-backend-usze.onrender.com//api/reviews", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ 

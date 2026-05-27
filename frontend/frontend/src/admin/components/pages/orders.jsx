@@ -15,7 +15,7 @@ const AdminOrders = () => {
   useEffect(() => {
     const fetchAllOrders = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/admin/orders');
+        const response = await fetch('https://verdant-backend-usze.onrender.com//api/admin/orders');
         const data = await response.json();
         if (data.success) {
           setOrders(data.orders);
@@ -32,7 +32,7 @@ const AdminOrders = () => {
   // --- UPDATE STATUS FUNCTION ---
   const handleStatusChange = async (orderId, newStatus) => {
     try {
-      const response = await fetch('http://localhost:5000/api/admin/update-order-status', {
+      const response = await fetch('https://verdant-backend-usze.onrender.com//api/admin/update-order-status', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ orderId, newStatus })
