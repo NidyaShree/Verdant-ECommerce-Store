@@ -11,6 +11,6 @@
 }
 
 /* Resets top margin for home page views since HeroSlider has its own internal padding-top */
-.main-content has(.hero-slider) {
+.main-content :has(.hero-slider) {
   margin-top: 0;
 }
